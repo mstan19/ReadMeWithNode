@@ -18,10 +18,10 @@ const generateReadMe = ({projectName, purpose, installation, usage, license, con
 ## Description
  ${purpose}.
 
-##Installation
+## Installation
 To create this project, follow these several steps. ${installation}
 
-##Usage
+## Usage
 To use this application, ${usage}. 
 
 This is what the ${projectName} will look like when deployed.
@@ -29,15 +29,16 @@ This is what the ${projectName} will look like when deployed.
 ![${projectName} mock-up](./dev/assets/images/realreadmemockup.png)
 
 ## License
-???? ${license}
+![GitHub license](https://img.shields.io/badge/license-${license}-blue.svg)
 
-##Contributing
+
+## Contributing
 ${contribution}
 
-##Tests
+## Tests
 ${tests}
 
-##Questions
+## Questions
 For more information about this application, please email me at ${email}. Interested in my work? Checkout my GitHUb repositories. My GitHub username is ${GHusername}, and here is my GitHub profile: ${GHlink}.
 
 
@@ -70,9 +71,10 @@ inquirer
       message: 'Explain how to use this project? ',
     },
     {
-      type: 'input',
+      type: 'list',
       name: 'license',
-      message: 'What licenses is/are required for this proect?',
+      message: 'What license(s) is/are required for this project?',
+      choices: ['GPL 3.0', 'MIT', 'BSD 3', 'APACHE 2.0'],
     },
     {
       type: 'input',

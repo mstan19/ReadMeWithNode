@@ -29,7 +29,7 @@ This is what the README.md will look like when deployed.
 ![ReadMeWithNode mock-up](./dev/assets/images/realreadmemockup.png)
 
 ## License
-????
+This application does not require any licenses
 
 ## Contributing
 If you would like to contribute to this project, please email me. My email can be found in the Questions section.
