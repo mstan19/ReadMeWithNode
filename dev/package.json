@@ -1,0 +1,15 @@
+{
+  "name": "dev",
+  "version": "1.0.0",
+  "description": "The purpose of this assignment is to generate a password that contains random upper case, lower case letters, special characters, and/or numerical characters. We are provided with js file that needs to fill in with code to make a unique password everytime we click generate password. The Html and style.css did not need to be modified.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "inquirer": "^8.2.4"
+  }
+}
