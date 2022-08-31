@@ -1,22 +1,40 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 
-const generateReadMe = ({projectName, purpose, files, refactored1, refactored2, refactored3, refactored4, link }) =>
+const generateReadMe = ({projectName, purpose, email, github, GHlink, link }) =>
 `# ${projectName}
+
+## Description of the Project
 The purpose of this assignment is to ${purpose}.
+This is what the website will look like when deployed.
 
-## Website Screenshot
-This is what the website will look when ${files}.
+![ReadMeWithNode mock-up](./images/readmeGenerated.png)
 
-![PasswordGenerator mock-up](./images/passwordgenemockup.png)
+##Table of Contents
+-[Installation](#installation)
+-[Usage](#usage)
+-[Credits](#credits)
+-[License](#license)
+-[Questions](#questions)
+-[Depolyment](#depolyment)
 
-## How Code Was Refactored
-* ${refactored1}.
-* ${refactored2}.
-* ${refactored3}.
-* ${refactored4}.
+##Installation
 
-## How to deploy the link application
+
+##Usage
+
+
+##Contributing
+
+
+##Tests
+
+
+##Questions
+For more information about this application, please email me at ${email}. Interested in my work? Checkout my GitHUb repositories. My GitHub username is ${github}, and here is my GitHub profile: ${GHlink}.
+
+
+## Depolyment
 * Click on this link for deployed application
 * ${link}
 `;
@@ -68,7 +86,7 @@ inquirer
     .then((answers) => {
       const readMeContent = generateReadMe(answers);
   
-      fs.writeFile('readme.md', readMeContent, (err) =>
-        err ? console.err("Failed to generate ReadMe file") : console.log('Successfully created readMe.md!')
+      fs.writeFile('README.md', readMeContent, (err) =>
+        err ? console.err("Failed to generate ReadMe file") : console.log('Successfully created README.md!')
       );
     });
