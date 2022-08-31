@@ -1,37 +1,44 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 
-const generateReadMe = ({projectName, purpose, email, github, GHlink, link }) =>
+const generateReadMe = ({projectName, purpose, installation, usage, license, contribution, tests, email, GHusername, GHlink, link }) =>
 `# ${projectName}
 
-## Description of the Project
-The purpose of this assignment is to ${purpose}.
-This is what the website will look like when deployed.
-
-![ReadMeWithNode mock-up](./images/readmeGenerated.png)
-
-##Table of Contents
--[Installation](#installation)
+## Table of Contents
+-[Description](#description) 
+-[Installation](#installation) 
 -[Usage](#usage)
--[Credits](#credits)
 -[License](#license)
--[Questions](#questions)
+-[Contributing](#contributing) 
+-[Tests](#tests) 
+-[Questions](#questions) 
 -[Depolyment](#depolyment)
 
-##Installation
 
+## Description
+ ${purpose}.
+
+##Installation
+To create this project, follow these several steps. ${installation}
 
 ##Usage
+To use this application, ${usage}. 
 
+This is what the ${projectName} will look like when deployed.
+
+![${projectName} mock-up](./dev/assets/images/realreadmemockup.png)
+
+## License
+???? ${license}
 
 ##Contributing
-
+${contribution}
 
 ##Tests
-
+${tests}
 
 ##Questions
-For more information about this application, please email me at ${email}. Interested in my work? Checkout my GitHUb repositories. My GitHub username is ${github}, and here is my GitHub profile: ${GHlink}.
+For more information about this application, please email me at ${email}. Interested in my work? Checkout my GitHUb repositories. My GitHub username is ${GHusername}, and here is my GitHub profile: ${GHlink}.
 
 
 ## Depolyment
@@ -50,32 +57,52 @@ inquirer
     {
       type: 'input',
       name: 'purpose',
-      message: 'Complete this sentence. The purpose of this assignment is to:',
+      message: 'What is the purpose of this project?',
     },
     {
       type: 'input',
-      name: 'files',
-      message: 'Complete this sentence. This is what the website will look when:... When what files are modified/added?',
+      name: 'installation',
+      message: 'Explain how to install this project?',
     },
     {
       type: 'input',
-      name: 'refactored1',
-      message: 'Give one way, the code was refactored? ',
+      name: 'usgae',
+      message: 'Explain how to use this project? ',
     },
     {
       type: 'input',
-      name: 'refactored2',
-      message: 'Give another way, the code was refactored?',
+      name: 'license',
+      message: 'What licenses is/are required for this proect?',
     },
     {
       type: 'input',
-      name: 'refactored3',
-      message: 'What is another way the code was refactored?',
+      name: 'contribution',
+      message: 'How can other programmers contribute to this project?',
     },
     {
       type: 'input',
-      name: 'refactored4',
-      message: 'Finally, give another the code was refactored?',
+      name: 'tests',
+      message: 'What are some tests for your application?',
+    },
+    {
+      type: 'input',
+      name: 'email',
+      message: 'Enter your email.',
+    },
+    {
+      type: 'input',
+      name: 'GHusername',
+      message: 'Enter your GitHub username.',
+    },
+    {
+      type: 'input',
+      name: 'GHlink',
+      message: 'Enter a link to Git Hub profile.',
+    },
+    {
+      type: 'input',
+      name: 'email',
+      message: 'Enter your email address.',
     },
     {
       type: 'input',
