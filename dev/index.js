@@ -1,7 +1,8 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 
-const generateReadMe = ({projectName, purpose, installation, usage, license, contribution, tests, email, GHusername, GHlink, link }) =>
+const generateReadMe = ({projectName, purpose, installation, usage, mockUpImage, license, contribution, tests, email, GHusername, GHlink, link }) =>
+
 `# ${projectName}
 
 ## Table of Contents
@@ -26,7 +27,7 @@ To use this application, ${usage}.
 
 This is what the ${projectName} will look like when deployed.
 
-![${projectName} mock-up](./dev/assets/images/realreadmemockup.png)
+![${projectName} mock-up](${mockUpImage})
 
 ## License
 ![GitHub license](https://img.shields.io/badge/license-${license}-blue.svg)
@@ -67,13 +68,18 @@ inquirer
     },
     {
       type: 'input',
-      name: 'usgae',
+      name: 'usage',
       message: 'Explain how to use this project? ',
+    },
+    {
+      type: 'input',
+      name: 'mockUpImage',
+      message: 'Give the relative path for your mock up image ',
     },
     {
       type: 'list',
       name: 'license',
-      message: 'What license(s) is/are required for this project?',
+      message: 'What license is required for this project?',
       choices: ['GPL 3.0', 'MIT', 'BSD 3', 'APACHE 2.0'],
     },
     {

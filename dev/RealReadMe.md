@@ -26,22 +26,25 @@ To use this application, open the terminal, respective to the file. Run the ```n
 
 This is what the README.md will look like when deployed.
 
-![ReadMeWithNode mock-up](./dev/assets/images/realreadmemockup.png)
+![ReadMeWithNode mock-up](../assets/images/readmeMockUp.png)
 
 ## License
-This application does not require any licenses
+This application does not require any licenses.
 
 ## Contributing
 If you would like to contribute to this project, please email me. My email can be found in the Questions section.
 
 ## Tests
-Currently, there are no tests for this project.
+Currently, there is no tests for this project.
 
 ## Questions
 
-For more information about this application, please email me at ${email}. Interested in my work? Checkout my GitHUb repositories. My GitHub username is ${username}, and here is my GitHub profile: ${GHprofile}.
+For more information about this application, please email me at melissastan91@gmail.com. Interested in my work? Checkout my GitHUb repositories. My GitHub username is mstan19, and here is my GitHub profile: https://github.com/mstan19.
+
+## Video
+Click on this link for the demo of this application.
+https://drive.google.com/file/d/1kwKDboNT8bQ7vIGE4PigHE5zWiD5-Gvi/view
 
 ## Depolyment
-
-- Click on this link for deployed application
-- https://github.com/mstan19/ReadMeWithNode
+Click on this link for deployed application
+https://github.com/mstan19/ReadMeWithNode
